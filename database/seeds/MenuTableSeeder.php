@@ -185,6 +185,18 @@ class MenuTableSeeder extends Seeder
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
+            [
+                'name' => 'Canteen',
+                'slug' => 'canteen',
+                'order' => 9,
+                'status' => true,
+                'route' => 'admin.canteen.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+
 //            [
 //                'name' => 'Test',
 //                'slug' => 'student',
