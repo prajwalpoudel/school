@@ -56,3 +56,7 @@ Route::resource('installment', 'Fees\InstallmentController');
         Route::get('library/returned-book/list', 'Library\ReturnedController@list')->name('returned-book.list');
         Route::resource('library/returned-book', 'Library\ReturnedController');
     });
+
+    // Canteen
+    Route::get('canteen/list', 'Canteen\CanteenController@list')->name('discount_package.list');
+    Route::resource('canteen', 'Canteen\CanteenController');
