@@ -16,6 +16,7 @@ class CreateUserDetailsTable extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('dob')->nullable();
             $table->string('image')->nullable();

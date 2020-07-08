@@ -73,13 +73,46 @@ class MenuTableSeeder extends Seeder
                 'related_route' => null
             ],
             [
-                'name' => 'Student',
-                'slug' => 'student',
+                'name' => 'HR Management',
+                'slug' => 'hr_management',
                 'order' => 5,
                 'status' => true,
                 'route' => 'admin.student.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
                 'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Student',
+                'slug' => 'student',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.student.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 5,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Teacher',
+                'slug' => 'teacher',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.teacher.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 5,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Driver',
+                'slug' => 'driver',
+                'order' => 3,
+                'status' => true,
+                'route' => 'admin.driver.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 5,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -94,8 +127,6 @@ class MenuTableSeeder extends Seeder
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
-
-
             [
                 'name' => 'Fees',
                 'slug' => 'fees',
@@ -110,22 +141,22 @@ class MenuTableSeeder extends Seeder
             [
                 'name' => 'Fee Category',
                 'slug' => 'fee_category',
-                'order' => 2,
+                'order' => 1,
                 'status' => true,
                 'route' => 'admin.fee_category.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 7,
+                'parent_id' => 10,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
                 'name' => 'Fee',
                 'slug' => 'fee',
-                'order' => 1,
+                'order' => 2,
                 'status' => true,
                 'route' => 'admin.fee.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 7,
+                'parent_id' => 10,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -144,7 +175,7 @@ class MenuTableSeeder extends Seeder
             [
                 'name' => 'Library',
                 'slug' => 'library',
-                'order' => 8,
+                'order' => 9,
                 'status' => true,
                 'route' => 'admin.library1.category.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
@@ -159,7 +190,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.category.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 11,
+                'parent_id' => 14,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -170,7 +201,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.book.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 11,
+                'parent_id' => 14,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -181,14 +212,14 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.issued.books.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 11,
+                'parent_id' => 14,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
                 'name' => 'Canteen',
                 'slug' => 'canteen',
-                'order' => 9,
+                'order' => 10,
                 'status' => true,
                 'route' => 'admin.canteen.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
@@ -196,6 +227,40 @@ class MenuTableSeeder extends Seeder
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
+            [
+                'name' => 'Transportation',
+                'slug' => 'transportation',
+                'order' => 11,
+                'status' => true,
+                'route' => 'admin.library1.category.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Vehicles',
+                'slug' => 'vehicles',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.vehicle.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 19,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Routes',
+                'slug' => 'routes',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.route.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 19,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+
 
 //            [
 //                'name' => 'Test',
@@ -242,6 +307,8 @@ class MenuTableSeeder extends Seeder
 //                'related_route' => null
 //            ],
         ];
+
+        $this->menuService->truncate();
 
         foreach ($menus as $menu) {
             $this->menuService->updateOrCreate(['slug' => $menu['slug'], 'parent_id' => $menu['parent_id']], $menu);

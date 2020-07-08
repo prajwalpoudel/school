@@ -70,4 +70,10 @@ class User extends Model
     public function librarian() {
         return $this->hasOne(Librarian::class);
     }
+    /**
+     * @return HasOne
+     */
+    public function driver() {
+        return $this->hasOne(Driver::class);
+    }
 }

@@ -58,5 +58,22 @@ Route::resource('installment', 'Fees\InstallmentController');
     });
 
     // Canteen
-    Route::get('canteen/list', 'Canteen\CanteenController@list')->name('discount_package.list');
+    Route::get('canteen/list', 'Canteen\CanteenController@list')->name('canteen.list');
     Route::resource('canteen', 'Canteen\CanteenController');
+
+    // vehicle
+    Route::get('vehicle/list', 'Vehicle\VehicleController@list')->name('vehicle.list');
+    Route::resource('vehicle', 'Vehicle\VehicleController');
+
+    // route
+    Route::get('route/list', 'Route\RouteController@list')->name('route.list');
+    Route::resource('route', 'Route\RouteController');
+
+    // Teachers
+    Route::get('teacher/list', 'Teacher\TeacherController@list')->name('teacher.list');
+    Route::resource('teacher', 'Teacher\TeacherController');
+
+    // Driver
+    Route::get('driver/list', 'Driver\DriverController@list')->name('teacher.list');
+    Route::resource('driver', 'Driver\DriverController');
+    

@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserDetail extends Model
+class Driver extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['phone', 'address', 'dob', 'image'];
+    protected $fillable = [];
+
     /**
      * @return BelongsTo
      */

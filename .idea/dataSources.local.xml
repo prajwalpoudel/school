@@ -15,5 +15,11 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="school" uuid="e76c61c0-7948-416b-a3cb-495f35a53f85">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

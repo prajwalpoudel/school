@@ -42,6 +42,14 @@ class RoleTableSeeder extends Seeder
             [
                 'name' => 'parent',
                 'display_name' => 'Parent',
+            ],
+            [
+                'name' => 'driver',
+                'display_name' => 'Driver',
+            ],
+            [
+                'name' => 'accountant',
+                'display_name' => 'Accountant',
             ]
         ];
 
