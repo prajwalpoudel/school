@@ -1,83 +1,74 @@
 <?php
 
-namespace App\Http\Controllers\User\Admin\EmailTemplate;
+namespace App\Http\Controllers\User\Admin\Route;
 
 use App\Http\Controllers\Controller;
 use App\Services\General\DatatableService;
-use App\Services\General\EmailTemplateService;
 use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
+use App\Services\General\Route\RouteService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
-class EmailTemplateController extends Controller
+class RouteController extends Controller
 {
     /**
      * @var Breadcrumbs
      */
     private $breadcrumbs;
+
     /**
-     * @var EmailTemplateService
+     * @var GradeService
      */
-    private $emailTemplateService;
+    private $gradeService;
     /**
      * @var DatatableService
      */
     private $datatableService;
 
-    /**
-     * EmailTemplateController constructor.
+     /**
+     * GradeController constructor.
      * @param Breadcrumbs $breadcrumbs
-     * @param EmailTemplateService $emailTemplateService
+     * @param RouteService $routeService
      * @param DatatableService $datatableService
      */
+
     public function __construct(
         Breadcrumbs $breadcrumbs,
-        EmailTemplateService $emailTemplateService,
+        RouteService $routeService,
         DatatableService $datatableService
     )
-    {
+     {
         $this->breadcrumbs = $breadcrumbs;
-        $this->emailTemplateService = $emailTemplateService;
+        $this->routeService = $routeService;
         $this->datatableService = $datatableService;
     }
 
-    /**
-     * @return mixed
-     * @throws \Exception
-     */
     public function list() {
         $actionData = [
             'edit' => true,
-            'editUrl' => 'admin.grade.edit',
+            'editUrl' => 'admin.route.edit',
             'editIcon' => '',
             'editClass' => '',
             'delete' => false,
             'view' => true,
-            'viewUrl' => 'admin.grade.edit',
+            'viewUrl' => 'admin.route.edit',
             'viewIcon' => '',
             'viewClass' => '',
         ];
 
         $query = $this->datatableService->getData(
-            'email_templates',
+            'routes',
             null,
             [
                 'id',
-                'title',
-                'subject',
-                'content',
-                'email_from'
+                'vehicle',
+                'route',
             ]
         );
         $query->addColumn('action', function ($data) use($actionData) {
             $id = $data->id;
             return view('general.datatable.action', compact('actionData', 'id'));
         });
-        $query->editColumn('content', function ($data) {
-            return strip_tags(Str::limit($data->content, 100));
-        });
-        $query->rawColumns(['content', 'action']);
-        return $query->make(true);
+        return $query->make();
     }
 
     /**
@@ -87,9 +78,9 @@ class EmailTemplateController extends Controller
      */
     public function index()
     {
-        $breadcrumbs = $this->breadcrumbs::render('admin.email_template.index');
+       $breadcrumbs = $this->breadcrumbs::render('admin.grade.index');
 
-        return view('user.admin.emailTemplate.index', compact('breadcrumbs'));
+       return view('user.admin.route.index', compact('breadcrumbs'));
     }
 
     /**
@@ -99,7 +90,9 @@ class EmailTemplateController extends Controller
      */
     public function create()
     {
-        //
+       $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+
+        return view('user.admin.route.create', compact('breadcrumbs'));
     }
 
     /**
@@ -110,7 +103,9 @@ class EmailTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->routeService->create($request->all());
+
+        return redirect()->route('admin.route.index');
     }
 
     /**
@@ -132,7 +127,10 @@ class EmailTemplateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+        $route = $this->routeService->findOrFail($id);
+
+        return view('user.admin.route.edit', compact('breadcrumbs', 'route'));
     }
 
     /**
@@ -144,7 +142,9 @@ class EmailTemplateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+          $this->routeService->update($id, $request->all());
+
+        return redirect()->route('admin.route.index');
     }
 
     /**

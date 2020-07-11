@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Admin\Student;
 use App\Entities\Grade;
 use App\Entities\Section;
 use App\Http\Controllers\Controller;
+use App\School\Constants\RoleConstant;
 use App\Services\General\DatatableService;
 use App\Services\General\GradeService;
 use App\Services\General\SectionService;
@@ -87,39 +88,39 @@ public function list() {
     ];
 
     $query = $this->datatableService->getData(
-        'users',
+        'students',
         [
             [
-                'name' => 'students',
+                'name' => 'users',
                 'first' => 'users.id',
                 'second' => 'students.user_id',
                 'joins' => [
                     [
-                        'name' => 'student_details',
-                        'first' => 'students.id',
-                        'second' => 'student_details.student_id',
+                        'name' => 'user_details',
+                        'first' => 'users.id',
+                        'second' => 'user_details.user_id',
                         'joins' => []
-                    ],
-                    [
-                        'name' => 'sections',
-                        'first' => 'students.section_id',
-                        'second' => 'sections.id',
-                        'joins' => [
-                            [
-                                'name' => 'grades',
-                                'first' => 'sections.grade_id',
-                                'second' => 'grades.id',
-                                'joins' => []
-                            ]
-                        ]
                     ]
                 ]
             ],
             [
-                'name' => 'user_details',
-                'first' => 'users.id',
-                'second' => 'user_details.user_id',
+                'name' => 'student_details',
+                'first' => 'students.id',
+                'second' => 'student_details.student_id',
                 'joins' => []
+            ],
+            [
+                'name' => 'sections',
+                'first' => 'students.section_id',
+                'second' => 'sections.id',
+                'joins' => [
+                    [
+                        'name' => 'grades',
+                        'first' => 'sections.grade_id',
+                        'second' => 'grades.id',
+                        'joins' => []
+                    ]
+                ]
             ]
         ],
         [
@@ -167,7 +168,7 @@ public function store(Request $request)
     $storeData = array_merge(
         $request->all(),
         [
-            'role_id' => 2,
+            'role_id' => RoleConstant::STUDENT_ROLE_ID,
             'password' => bcrypt('password'),
             'section_id' => (int) $request->section_id
         ]

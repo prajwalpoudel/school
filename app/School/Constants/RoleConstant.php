@@ -25,6 +25,14 @@ class RoleConstant
      * Parent Role Constant
      */
     const PARENT_ROLE_ID = 4;
+    /**
+     * Driver Role Constant
+     */
+    const DRIVER_ROLE_ID = 5;
+    /**
+     * Accountant Role Constant
+     */
+    const ACCOUNTANT_ROLE_ID = 6;
 
 
 }

@@ -25,6 +25,13 @@ abstract class BaseService
     /**
      * @return mixed
      */
+    public function truncate() {
+        return $this->model->truncate();
+    }
+
+    /**
+     * @return mixed
+     */
     public function query()
     {
         return $this->model->query();

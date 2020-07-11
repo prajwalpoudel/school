@@ -1,46 +1,44 @@
 <?php
 
-namespace App\Http\Controllers\User\Admin\EmailTemplate;
+namespace App\Http\Controllers\User\Admin\Vehicle;
 
 use App\Http\Controllers\Controller;
-use App\Services\General\DatatableService;
-use App\Services\General\EmailTemplateService;
-use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
+use App\Services\General\DatatableService;
+use App\Services\General\Vehicle\VehicleService;
 
-class EmailTemplateController extends Controller
+class VehicleController extends Controller
 {
     /**
      * @var Breadcrumbs
      */
     private $breadcrumbs;
     /**
-     * @var EmailTemplateService
+     * @var vehicleService
      */
-    private $emailTemplateService;
+    private $vehicleService;
     /**
      * @var DatatableService
      */
     private $datatableService;
 
     /**
-     * EmailTemplateController constructor.
+     * vehicleController constructor.
      * @param Breadcrumbs $breadcrumbs
-     * @param EmailTemplateService $emailTemplateService
+     * @param vehicleService $vehicleService
      * @param DatatableService $datatableService
      */
     public function __construct(
         Breadcrumbs $breadcrumbs,
-        EmailTemplateService $emailTemplateService,
+        VehicleService $vehicleService,
         DatatableService $datatableService
     )
     {
         $this->breadcrumbs = $breadcrumbs;
-        $this->emailTemplateService = $emailTemplateService;
+        $this->vehicleService = $vehicleService;
         $this->datatableService = $datatableService;
     }
-
     /**
      * @return mixed
      * @throws \Exception
@@ -48,36 +46,31 @@ class EmailTemplateController extends Controller
     public function list() {
         $actionData = [
             'edit' => true,
-            'editUrl' => 'admin.grade.edit',
+            'editUrl' => 'admin.vehicle.edit',
             'editIcon' => '',
             'editClass' => '',
             'delete' => false,
             'view' => true,
-            'viewUrl' => 'admin.grade.edit',
+            'viewUrl' => 'admin.vehicle.edit',
             'viewIcon' => '',
             'viewClass' => '',
         ];
 
         $query = $this->datatableService->getData(
-            'email_templates',
+            'vehicles',
             null,
             [
                 'id',
-                'title',
-                'subject',
-                'content',
-                'email_from'
+                'name',
+                'driver_name',
+                'driver_number',
             ]
         );
         $query->addColumn('action', function ($data) use($actionData) {
             $id = $data->id;
             return view('general.datatable.action', compact('actionData', 'id'));
         });
-        $query->editColumn('content', function ($data) {
-            return strip_tags(Str::limit($data->content, 100));
-        });
-        $query->rawColumns(['content', 'action']);
-        return $query->make(true);
+        return $query->make();
     }
 
     /**
@@ -87,9 +80,9 @@ class EmailTemplateController extends Controller
      */
     public function index()
     {
-        $breadcrumbs = $this->breadcrumbs::render('admin.email_template.index');
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.index');
 
-        return view('user.admin.emailTemplate.index', compact('breadcrumbs'));
+        return view('user.admin.vehicle.index', compact('breadcrumbs'));
     }
 
     /**
@@ -99,7 +92,9 @@ class EmailTemplateController extends Controller
      */
     public function create()
     {
-        //
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+
+        return view('user.admin.vehicle.create', compact('breadcrumbs'));
     }
 
     /**
@@ -110,7 +105,9 @@ class EmailTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->vehicleService->create($request->all());
+
+        return redirect()->route('admin.vehicle.index');
     }
 
     /**
@@ -132,7 +129,10 @@ class EmailTemplateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+        $vehicle = $this->vehicleService->findOrFail($id);
+
+        return view('user.admin.vehicle.edit', compact('breadcrumbs', 'vehicle'));
     }
 
     /**
@@ -144,7 +144,10 @@ class EmailTemplateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $this->vehicleService->update($id, $request->all());
+
+        return redirect()->route('admin.vehicle.index');
+
     }
 
     /**
