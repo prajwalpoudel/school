@@ -15,6 +15,13 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('grade_id');
+            $table->string('name');
+            $table->string('author')->nullable();
+            $table->string('publication')->nullable();
+            $table->string('edition')->nullable();
+            $table->float('price')->nullable();
+
             $table->timestamps();
         });
     }

@@ -2,8 +2,8 @@
     <x-slot name="headTitle"> {{ $data['form-title'] }}</x-slot>
     <x-slot name="content">
         <div class="form-group m-form__group row">
-            <x-inputs.text form-class="col-lg-6" label="Grade" labelfor="name" name="name" type="text" value="{{  $data['grade']->name ?? null }}"></x-inputs.text>
-            <x-inputs.text form-class="col-lg-6" label="Display Name" labelfor="display_name" name="display_name" type="text" value="{{  $data['grade']->display_name ?? null}}"></x-inputs.text>
+            <x-inputs.text form-class="col-lg-6" :errors="$errors" label="Grade" labelfor="name" name="name" type="text" value="{{  $data['grade']->name ?? null }}"></x-inputs.text>
+            <x-inputs.text form-class="col-lg-6" :errors="$errors" label="Display Name" labelfor="display_name" name="display_name" type="text" value="{{  $data['grade']->display_name ?? null}}"></x-inputs.text>
         </div>
 
     </x-slot>

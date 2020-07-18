@@ -22,7 +22,6 @@
             {!!  Form::open(['route' => $formAction, 'class' => 'm-form m-form--fit m-form--label-align-right'. $formClass, 'method' => $formMethod]) !!}
 
         @endif
-        {{--        <form class="m-form m-form--fit m-form--label-align-right {{ $formClass }}" method="{{ $formMethod }}" action="{{ $formAction }}">--}}
         @csrf
     @endif
     @if($content)
@@ -36,7 +35,6 @@
         </div>
     @endif
     @if($form)
-        {{--        </form>--}}
         {!! Form::close() !!}
     @endif
 </div>

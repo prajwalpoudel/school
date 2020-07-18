@@ -50,6 +50,18 @@ class Text extends Component
      * @var null
      */
     public $value;
+    /**
+     * @var bool
+     */
+    public $readOnly;
+    /**
+     * @var null
+     */
+    public $disabled;
+    /**
+     * @var null
+     */
+    public $errors;
 
     /**
      * Create a new component instance.
@@ -65,6 +77,9 @@ class Text extends Component
      * @param null $helpText
      * @param null $helpClass
      * @param null $value
+     * @param bool $readOnly
+     * @param null $disabled
+     * @param null $errors
      */
     public function __construct(
         $formClass = null,
@@ -77,7 +92,10 @@ class Text extends Component
         $placeHolder = null,
         $helpText = null,
         $helpClass = null,
-        $value = null
+        $value = null,
+        $readOnly = null,
+        $disabled = null,
+        $errors = null
     )
     {
 
@@ -92,6 +110,9 @@ class Text extends Component
         $this->helpText = $helpText;
         $this->helpClass = $helpClass;
         $this->value = $value;
+        $this->readOnly = $readOnly;
+        $this->disabled = $disabled;
+        $this->errors = $errors;
     }
 
     /**

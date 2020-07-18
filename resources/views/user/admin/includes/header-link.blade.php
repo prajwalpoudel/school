@@ -35,4 +35,5 @@
     <!--end::Page Vendors Styles -->
     <link rel="shortcut icon" href="{{asset('admin/assets/demo/demo12/media/img/logo/favicon.ico')}}" />
     <link  href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('general/assets/css/style.css')}}">
 </head>

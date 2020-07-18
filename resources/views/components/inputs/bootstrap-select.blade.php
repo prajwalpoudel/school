@@ -8,7 +8,7 @@
                 <option disabled>{{ $disabledText }}</option>
             @endif
             @foreach($options as $option)
-                <option value="{{ $option->id }}">{{ $option->name }}</option>
+                <option value="{{ $option[$optionValue] }}">{{ $option[$optionText] }}</option>
             @endforeach
         </select>
     </div>
