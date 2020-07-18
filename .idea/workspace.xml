@@ -20,65 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c6a357-83bd-422b-b326-e9e480a4e912" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Entities/CalendarGroup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Calendar/CalendarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Calendar/GroupController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Subject/SubjectController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/General/GradeRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/General/Calendar/CalendarService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/General/Calendar/GroupService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/General/SubjectService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Test/CalendarService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/Components/basic/accordion/Accordion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/Components/basic/accordion/AccordionDetail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/Components/tables/Table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_06_172852_create_calendar_groups_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/general/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/basic/accordion/accordion-detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/basic/accordion/accordion.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/tables/table.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/calendar/event/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/calendar/event/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/calendar/event/eventModal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/calendar/event/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/calendar/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/group/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/group/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/group/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/calendar/group/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/grade/details/basic.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/grade/details/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/grade/details/section.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/grade/details/subject.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/subject/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/subject/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/subject/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/subject/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Grade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Grade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Section.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Subject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Grade/GradeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Grade/GradeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Library/IssuedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Library/IssuedController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/Inputs/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Inputs/Text.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/Inputs/bootstrapSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Inputs/bootstrapSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_30_163452_create_subjects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_30_163452_create_subjects_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/inputs/bootstrap-select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/inputs/bootstrap-select.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/inputs/text.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/inputs/text.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/portlets/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/portlets/base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/grade/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/grade/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/includes/header-link.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/includes/header-link.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/library/issued/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/library/issued/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/section/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/section/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user/admin/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -419,11 +362,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1592497447124" />
-    <state x="383" y="128" width="672" height="600" key="search.everywhere.popup" timestamp="1593921759918">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595065841901">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="383" y="128" width="672" height="600" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593921759918" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592622566569" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595065841901" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
