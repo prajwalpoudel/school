@@ -228,6 +228,39 @@ class MenuTableSeeder extends Seeder
                 'related_route' => null
             ],
             [
+                'name' => 'Calendar',
+                'slug' => 'calendar',
+                'order' => 9,
+                'status' => true,
+                'route' => 'admin.calendar.group.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Group',
+                'slug' => 'calendar_group',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.calendar.group.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Calendar',
+                'slug' => 'calendar-child',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.calendar.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
                 'name' => 'Transportation',
                 'slug' => 'transportation',
                 'order' => 11,

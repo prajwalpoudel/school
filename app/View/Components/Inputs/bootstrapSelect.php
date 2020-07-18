@@ -54,11 +54,32 @@ class bootstrapSelect extends Component
      * @var null
      */
     public $helpClass;
+    /**
+     * @var null
+     */
+    public $optionText;
+    /**
+     * @var null
+     */
+    public $optionValue;
+
 
     /**
-     * Create a new component instance.
-     *
-     * @return void
+     * bootstrapSelect constructor.
+     * @param null $formClass
+     * @param null $label
+     * @param null $labelFor
+     * @param null $selectClass
+     * @param null $selectId
+     * @param null $name
+     * @param null $placeHolder
+     * @param bool $disabledOption
+     * @param string $disabledText
+     * @param array $options
+     * @param null $helpText
+     * @param null $helpClass
+     * @param null $optionText
+     * @param null $optionValue
      */
     public function __construct(
         $formClass = null,
@@ -72,7 +93,9 @@ class bootstrapSelect extends Component
         $disabledText = 'Select',
         $options = [],
         $helpText = null,
-        $helpClass = null
+        $helpClass = null,
+        $optionText = null,
+        $optionValue = null
     )
     {
         $this->formClass = $formClass;
@@ -87,6 +110,8 @@ class bootstrapSelect extends Component
         $this->options = $options;
         $this->helpText = $helpText;
         $this->helpClass = $helpClass;
+        $this->optionText = $optionText;
+        $this->optionValue = $optionValue;
     }
 
     /**

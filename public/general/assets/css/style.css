@@ -1,0 +1,11 @@
+.pt-10 {
+    padding-top: 10px;
+}
+
+.error {
+    color: red;
+    padding-top: 7px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: .85rem;
+}

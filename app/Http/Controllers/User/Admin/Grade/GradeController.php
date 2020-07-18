@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Admin\Grade;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\General\GradeRequest;
 use App\Services\General\DatatableService;
 use App\Services\General\GradeService;
 use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
@@ -52,7 +53,7 @@ class GradeController extends Controller
             'editClass' => '',
             'delete' => false,
             'view' => true,
-            'viewUrl' => 'admin.grade.edit',
+            'viewUrl' => 'admin.grade.show',
             'viewIcon' => '',
             'viewClass' => '',
         ];
@@ -102,7 +103,7 @@ class GradeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GradeRequest $request)
     {
         $this->gradeService->create($request->all());
 
@@ -117,6 +118,12 @@ class GradeController extends Controller
      */
     public function show($id)
     {
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+        $grade = $this->gradeService->query()->numberOfSections()->numberOfStudents()->findOrFail($id)->load(['sections' => function($query) {
+            return $query->numberOfStudents();
+        }, 'subjects']);
+
+        return view('user.admin.grade.details.detail', compact('grade', 'breadcrumbs'));
     }
 
     /**
@@ -140,7 +147,7 @@ class GradeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GradeRequest $request, $id)
     {
         $this->gradeService->update($id, $request->all());
 

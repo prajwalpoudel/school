@@ -89,7 +89,9 @@ class IssuedController extends Controller
      */
     public function create()
     {
-        return view('user.admin.library.issued.create');
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.index');
+
+        return view('user.admin.library.issued.create', compact('breadcrumbs'));
     }
 
     /**

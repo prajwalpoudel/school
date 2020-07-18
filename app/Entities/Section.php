@@ -19,4 +19,19 @@ class Section extends Model
     public function grade() {
         return $this->belongsTo(Grade::class);
     }
+
+    /**
+     * @return HasMany
+     */
+    public function students() {
+        return $this->hasMany(Student::class);
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeNumberOfStudents($query) {
+        return $query->withCount(['students as student_count']);
+    }
 }

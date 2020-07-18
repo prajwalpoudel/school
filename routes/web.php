@@ -22,9 +22,12 @@ Route::get('/', function () {
 //    return view('emails.layout', compact('content'));
 });
 
+//Test Routes
 Route::get('/menu', 'TestController@getMenus')->name('menu');
 Route::get('/test', 'TestController@test')->name('test');
 Route::get('/testData', 'TestController@testData')->name('test');
+Route::get('/test/calendar', 'TestController@testCalendar')->name('test.calendar');
+
 
 Auth::routes();
 

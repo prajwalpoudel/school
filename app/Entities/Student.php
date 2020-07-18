@@ -29,6 +29,13 @@ class Student extends Model
     }
 
     /**
+     * @return BelongsTo
+     */
+    public  function section() {
+        return $this->belongsTo(Section::class);
+    }
+
+    /**
      * @return MorphMany
      */
     public function issuedBooks() {
