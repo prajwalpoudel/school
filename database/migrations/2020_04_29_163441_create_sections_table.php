@@ -17,7 +17,9 @@ class CreateSectionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('grade_id');
             $table->string('name');
-            $table->string('display_name');
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->unsignedBigInteger('captain_id')->nullable();
+            $table->unsignedBigInteger('vice_captain_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

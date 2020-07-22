@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Guardian extends Model
 {
+    public $table = 'parents';
     protected $fillable = [];
 
     /**

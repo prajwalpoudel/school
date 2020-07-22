@@ -48,7 +48,7 @@ class EmailTemplateController extends Controller
     public function list() {
         $actionData = [
             'edit' => true,
-            'editUrl' => 'admin.grade.edit',
+            'editUrl' => 'admin.email_template.edit',
             'editIcon' => '',
             'editClass' => '',
             'delete' => false,
@@ -99,7 +99,9 @@ class EmailTemplateController extends Controller
      */
     public function create()
     {
-        //
+        $breadcrumbs = $this->breadcrumbs::render('admin.email_template.index');
+
+        return view('user.admin.emailTemplate.create', compact('breadcrumbs'));
     }
 
     /**
@@ -110,7 +112,9 @@ class EmailTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->emailTemplateService->create($request->all());
+
+        return redirect()->route('admin.email_template.index');
     }
 
     /**
@@ -132,7 +136,10 @@ class EmailTemplateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $breadcrumbs = $this->breadcrumbs::render('admin.grade.create');
+        $emailTemplate = $this->emailTemplateService->findOrFail($id);
+
+        return view('user.admin.emailTemplate.edit', compact('breadcrumbs', 'emailTemplate'));
     }
 
     /**
@@ -144,7 +151,9 @@ class EmailTemplateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->emailTemplateService->update($id, $request->all());
+
+        return redirect()->route('admin.email_template.index');
     }
 
     /**

@@ -4,13 +4,13 @@
 @endsection
 @section('content')
     <div class="m-content">
-        @include('user.admin.grade.partials.form',
+        @include('user.admin.emailTemplate.partials.form',
                     $data=[
-                        'form-action' => route('admin.grade.update', $grade->id),
+                        'form-action' => 'admin.email_template.update',
                         'form-method' => 'patch',
-                        'form-title' => 'Edit Grade',
+                        'form-title' => 'Edit Email Template',
                         'button-text' => 'Update',
-                        'grade' => $grade
+                        'emailTemplate' => $emailTemplate
                     ]
         )
     </div>

@@ -14,6 +14,8 @@ class User extends Model
     use Notifiable;
 
     protected $fillable = ['first_name', 'last_name', 'email', 'password', 'role_id'];
+    public $appends = ['full_name'];
+
 
     /**
      * @return BelongsTo
@@ -75,5 +77,12 @@ class User extends Model
      */
     public function driver() {
         return $this->hasOne(Driver::class);
+    }
+
+    /**
+     * @return string
+     */
+    public function getFullNameAttribute() {
+        return $this->first_name.' '.$this->last_name;
     }
 }

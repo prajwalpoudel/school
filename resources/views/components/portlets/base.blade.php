@@ -20,7 +20,6 @@
             {!!  Form::model($model, ['route' => [$formAction, $model->id], 'class' => 'm-form m-form--fit m-form--label-align-right'. $formClass, 'method' => $formMethod]) !!}
         @else
             {!!  Form::open(['route' => $formAction, 'class' => 'm-form m-form--fit m-form--label-align-right'. $formClass, 'method' => $formMethod]) !!}
-
         @endif
         @csrf
     @endif

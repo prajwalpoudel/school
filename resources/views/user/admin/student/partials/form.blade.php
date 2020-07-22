@@ -20,6 +20,8 @@
                 select-id1="grade"
                 placeHolder1="Enter grade"
                 :options1="$grades"
+                optionText1="name"
+                optionValue1="id"
                 form-class2="col-lg-6"
                 label2="Section"
                 labelfor2="section"
@@ -28,6 +30,8 @@
                 select-class2="section"
                 placeHolder2="Enter section"
                 :options2="$sections"
+                optionText2="name"
+                optionValue2="id"
                 check-field="grade_id"
             ></x-inputs.bootstrap-dependent-select>
         </div>

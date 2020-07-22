@@ -28,16 +28,52 @@ class GradeSeeder extends Seeder
     {
         $grades = [
             [
-                'name' => '1',
+                'name' => 'Nursery',
+                'display_name' => 'Nursery',
+            ],
+            [
+                'name' => 'KG',
+                'display_name' => 'KG',
+            ],
+            [
+                'name' => 'One',
                 'display_name' => 'One',
             ],
             [
-                'name' => '2',
+                'name' => 'Two',
                 'display_name' => 'Two',
             ],
             [
-            'name' => '3',
-            'display_name' => 'Three',
+                'name' => 'Three',
+                'display_name' => 'Three',
+            ],
+            [
+                'name' => 'Four',
+                'display_name' => 'Four',
+            ],
+            [
+                'name' => 'Five',
+                'display_name' => 'Five',
+            ],
+            [
+                'name' => 'Six',
+                'display_name' => 'Six',
+            ],
+            [
+                'name' => 'Seven',
+                'display_name' => 'Seven',
+            ],
+            [
+                'name' => 'Eight',
+                'display_name' => 'Eight',
+            ],
+            [
+                'name' => 'Nine',
+                'display_name' => 'Nine',
+            ],
+            [
+                'name' => 'Ten',
+                'display_name' => 'Ten',
             ]
         ];
 

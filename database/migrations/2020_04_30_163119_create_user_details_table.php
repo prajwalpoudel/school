@@ -18,7 +18,7 @@ class CreateUserDetailsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->string('dob')->nullable();
+            $table->timestamp('dob')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();

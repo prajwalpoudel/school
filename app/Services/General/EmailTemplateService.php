@@ -46,7 +46,7 @@ class EmailTemplateService extends BaseService
      */
     public function parseContent($content, $data = []) {
         foreach ($data as $key=>$val) {
-            $content = str_replace('['.$key.']', $val, $content);
+            $content = str_replace('['.strtoupper($key).']', $val, $content);
         }
 
         return $content;

@@ -2,7 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Entities\Student;
+use App\Entities\User;
+use App\Entities\UserDetail;
+use App\School\Constants\RoleConstant;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -19,10 +22,39 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'first_name' => $faker->firstName,
+        'last_name' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => bcrypt('password'),
+        'role_id' => $faker->randomElement([RoleConstant::STUDENT_ROLE_ID, RoleConstant::PARENT_ROLE_ID, RoleConstant::TEACHER_ROLE_ID, RoleConstant::ACCOUNTANT_ROLE_ID, RoleConstant::DRIVER_ROLE_ID]),
         'remember_token' => Str::random(10),
+        'is_published' => true
     ];
 });
+
+$factory->afterCreating(User::class, function ($user) {
+    $user->detail()->save(factory(UserDetail::class)->make());
+
+    switch ($user->role_id) {
+        case RoleConstant::STUDENT_ROLE_ID :
+            $user->student()->save(factory(Student::class)->make());
+            break;
+
+        case RoleConstant::TEACHER_ROLE_ID :
+            $user->teacher()->create();
+            break;
+
+        case RoleConstant::DRIVER_ROLE_ID :
+            $user->driver()->create();
+            break;
+
+        case RoleConstant::PARENT_ROLE_ID :
+            $user->guardian()->create();
+            break;
+
+        case RoleConstant::ACCOUNTANT_ROLE_ID :
+            $user->accountant()->create();
+            break;
+    }
+});
+
