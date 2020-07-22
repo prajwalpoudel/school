@@ -21,7 +21,12 @@ class EventServiceProvider extends ServiceProvider
 
         'App\Events\User\Created' => [
             'App\Listeners\User\SendCreatedNotification'
-        ]
+        ],
+        'App\Events\User\Admin\SectionPosted' => [
+            'App\Listeners\User\Admin\SendSectionRepresentativeAssignedNotification',
+            'App\Listeners\User\Admin\SendSectionViceRepresentativeAssignedNotification',
+            'App\Listeners\User\Admin\SendSectionTeacherAssignedNotification'
+        ],
     ];
 
     /**

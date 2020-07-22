@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Accountant extends Model
 {
-    protected $fillable = [];
+    protected $fillable = ['user_id'];
 
     /**
      * @return BelongsTo

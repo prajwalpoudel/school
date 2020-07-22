@@ -106,6 +106,22 @@ class bootstrapDependentSelect extends Component
      * @var null
      */
     public $checkField;
+    /**
+     * @var null
+     */
+    public $optionValue1;
+    /**
+     * @var null
+     */
+    public $optionText1;
+    /**
+     * @var null
+     */
+    public $optionValue2;
+    /**
+     * @var null
+     */
+    public $optionText2;
 
     /**
      * Create a new component instance.
@@ -131,6 +147,10 @@ class bootstrapDependentSelect extends Component
      * @param null $helpText2
      * @param null $helpClass2
      * @param null $checkField
+     * @param null $optionValue1
+     * @param null $optionText1
+     * @param null $optionValue2
+     * @param null $optionText2
      */
     public function __construct(
         $formClass1 = null,
@@ -153,7 +173,11 @@ class bootstrapDependentSelect extends Component
         $options2 = [],
         $helpText2 = null,
         $helpClass2 = null,
-        $checkField = null
+        $checkField = null,
+        $optionValue1 = null,
+        $optionText1 = null,
+        $optionValue2 = null,
+        $optionText2 = null
     )
     {
         //
@@ -178,6 +202,10 @@ class bootstrapDependentSelect extends Component
         $this->helpText2 = $helpText2;
         $this->helpClass2 = $helpClass2;
         $this->checkField = $checkField;
+        $this->optionValue1 = $optionValue1;
+        $this->optionText1 = $optionText1;
+        $this->optionValue2 = $optionValue2;
+        $this->optionText2 = $optionText2;
     }
 
     /**

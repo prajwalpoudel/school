@@ -7,7 +7,7 @@
                 id="{{ $selectId1 ?? ''}}" placeholder="{{ $placeHolder1 }}" name="{{$name1}}">
                 <option disabled selected>Select an option</option>
             @foreach($options1 as $option)
-                <option value="{{ $option->id }}">{{ $option->display_name }}</option>
+                <option value="{{ $option[$optionValue1] }}">{{ $option[$optionText1] }}</option>
             @endforeach
         </select>
     </div>
@@ -37,6 +37,9 @@
             var selectId2 = {!! json_encode($selectId2) !!}
             var selectClass2 = {!! json_encode($selectClass2) !!}
             var options2 = {!! json_encode($options2) !!}
+            var optionText2 = {!! json_encode($optionText2) !!}
+            var optionValue2 = {!! json_encode($optionValue2) !!}
+
             var options = '<option disabled selected>Select an option</option>'
             var checkField = {!! json_encode($checkField) !!}
 
@@ -46,7 +49,7 @@
                 $(options2).each(function (key,item) {
                     if(item[checkField] == selected)
                         {
-                            options+= '<option value='+item.id+'>'+ item.display_name +'</option>';
+                            options+= '<option value='+item[optionValue2]+'>'+ item[optionText2] +'</option>';
                         }
                     });
                 $('#' + selectId2).html(options).selectpicker('refresh');

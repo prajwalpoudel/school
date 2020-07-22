@@ -30,37 +30,103 @@ class SectionSeeder extends Seeder
             [
                 'grade_id' => 1,
                 'name' => 'A',
-                'display_name' => 'A',
             ],
             [
                 'grade_id' => 1,
                 'name' => 'B',
-                'display_name' => 'B',
             ],
             [
                 'grade_id' => 2,
                 'name' => 'A',
-                'display_name' => 'A',
             ],
             [
                 'grade_id' => 2,
                 'name' => 'B',
-                'display_name' => 'B',
             ],
             [
                 'grade_id' => 3,
                 'name' => 'A',
-                'display_name' => 'A',
             ],
             [
                 'grade_id' => 3,
                 'name' => 'B',
-                'display_name' => 'B',
+            ],
+            [
+                'grade_id' => 4,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 4,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 5,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 5,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 6,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 6,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 7,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 7,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 8,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 8,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 9,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 9,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 10,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 10,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 11,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 11,
+                'name' => 'B',
+            ],
+            [
+                'grade_id' => 12,
+                'name' => 'A',
+            ],
+            [
+                'grade_id' => 12,
+                'name' => 'B',
             ]
         ];
 
         foreach ($sections as $section) {
-            $this->sectionService->updateOrCreate(['name' => $section['name'], 'display_name' => $section['display_name']], $section);
+            $this->sectionService->updateOrCreate(['name' => $section['name'], 'grade_id' => $section['grade_id']], $section);
         }
     }
 }

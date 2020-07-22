@@ -5,13 +5,13 @@
 @section('content')
     <div class="m-content">
         <div class="m-content">
-            @include('user.admin.grade.partials.form',
+            @include('user.admin.emailTemplate.partials.form',
                         $data=[
-                            'form-action' => route('admin.grade.store'),
+                            'form-action' => 'admin.email_template.store',
                             'form-method' => 'post',
-                            'form-title' => 'Create Grade',
+                            'form-title' => 'Create Email Template',
                             'button-text' => 'Save',
-                            'grade' => null
+                            'emailTemplate' => null
                         ]
             )
         </div>

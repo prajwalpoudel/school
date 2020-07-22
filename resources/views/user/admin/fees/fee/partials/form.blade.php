@@ -2,8 +2,8 @@
     <x-slot name="headTitle"> {{ $data['form-title'] }}</x-slot>
     <x-slot name="content">
         <div class="form-group m-form__group row">
-            <x-inputs.bootstrap-select form-class="col-lg-6" label="Grade" labelfor="grade" name="grade_id" select-id="grade" placeHolder="Enter grade" :options="$grades"></x-inputs.bootstrap-select>
-            <x-inputs.bootstrap-select form-class="col-lg-6" label="Category" labelfor="category" name="category_id" select-id="category" placeHolder="Enter category" :options="$categories"></x-inputs.bootstrap-select>
+            <x-inputs.bootstrap-select form-class="col-lg-6" label="Grade" labelfor="grade" name="grade_id" select-id="grade" placeHolder="Enter grade" :options="$grades" optionText="display_name" optionValue="id"></x-inputs.bootstrap-select>
+            <x-inputs.bootstrap-select form-class="col-lg-6" label="Category" labelfor="category" name="category_id" select-id="category" placeHolder="Enter category" :options="$categories" optionText="name" optionValue="id"></x-inputs.bootstrap-select>
         </div>
         <div class="form-group m-form__group row">
             <x-inputs.text form-class="col-lg-6" label="Amount" labelfor="amount" name="amount" type="number" value="{{  $data['fee']->amount ?? null }}"></x-inputs.text>

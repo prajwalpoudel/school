@@ -11,6 +11,7 @@ class Teacher extends Model
     use SoftDeletes;
 
     protected $fillable = [];
+    public $appends = ['full_name'];
 
     /**
      * @return BelongsTo
@@ -18,4 +19,12 @@ class Teacher extends Model
     public  function user() {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFullNameAttribute() {
+        return $this->user->full_name;
+    }
+
 }

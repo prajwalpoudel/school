@@ -13,6 +13,7 @@ class Student extends Model
     use SoftDeletes;
 
     protected $fillable = ['section_id'];
+    public $appends = ['full_name'];
 
     /**
      * @return BelongsTo
@@ -40,5 +41,12 @@ class Student extends Model
      */
     public function issuedBooks() {
         return $this->morphMany(IssuedBook::class, 'issuable');
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFullNameAttribute() {
+        return $this->user->full_name;
     }
 }

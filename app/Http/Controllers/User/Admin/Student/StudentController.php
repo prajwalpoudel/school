@@ -151,8 +151,8 @@ public function list() {
 public function create()
 {
     $breadcrumbs = $this->breadcrumbs::render('admin.student.create');
-    $grades = $this->gradeService->select(['id', 'display_name']);
-    $sections = $this->sectionService->select(['id', 'grade_id', 'display_name']);
+    $grades = $this->gradeService->select(['id', 'name']);
+    $sections = $this->sectionService->select(['id', 'grade_id', 'name']);
 
     return view('user.admin.student.create', compact('breadcrumbs', 'grades', 'sections'));
 }
