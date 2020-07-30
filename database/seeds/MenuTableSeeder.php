@@ -40,42 +40,9 @@ class MenuTableSeeder extends Seeder
                 'related_route' => null
             ],
             [
-                'name' => 'Grade',
-                'slug' => 'grade',
-                'order' => 2,
-                'status' => true,
-                'route' => 'admin.grade.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => null,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-            [
-                'name' => 'Section',
-                'slug' => 'section',
-                'order' => 3,
-                'status' => true,
-                'route' => 'admin.section.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => null,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-            [
-                'name' => 'Email Template',
-                'slug' => 'email_template',
-                'order' => 4,
-                'status' => true,
-                'route' => 'admin.email_template.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => null,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-            [
                 'name' => 'HR Management',
                 'slug' => 'hr_management',
-                'order' => 5,
+                'order' => 2,
                 'status' => true,
                 'route' => 'admin.student.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
@@ -84,13 +51,13 @@ class MenuTableSeeder extends Seeder
                 'related_route' => null
             ],
             [
-                'name' => 'Student',
-                'slug' => 'student',
+                'name' => 'Accountant',
+                'slug' => 'accountant',
                 'order' => 1,
                 'status' => true,
-                'route' => 'admin.student.index',
+                'route' => 'admin.accountant.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 5,
+                'parent_id' => 2,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -101,81 +68,81 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.teacher.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 5,
+                'parent_id' => 2,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
+            [
+                'name' => 'Librarian',
+                'slug' => 'librariann',
+                'order' => 3,
+                'status' => true,
+                'route' => 'admin.librarian.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 2,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Parent',
+                'slug' => 'parent',
+                'order' => 4,
+                'status' => true,
+                'route' => 'admin.librarian.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 2,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Student',
+                'slug' => 'student',
+                'order' => 5,
+                'status' => true,
+                'route' => 'admin.student.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 2,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            
             [
                 'name' => 'Driver',
                 'slug' => 'driver',
-                'order' => 3,
+                'order' => 6,
                 'status' => true,
                 'route' => 'admin.driver.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 5,
+                'parent_id' => 2,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
-                'name' => 'Discount Package',
-                'slug' => 'discount_package',
-                'order' => 6,
+                'name' => 'Grade',
+                'slug' => 'grade',
+                'order' => 3,
                 'status' => true,
-                'route' => 'admin.discount_package.index',
+                'route' => 'admin.grade.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
                 'parent_id' => null,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
-                'name' => 'Fees',
-                'slug' => 'fees',
-                'order' => 7,
+                'name' => 'Section',
+                'slug' => 'section',
+                'order' => 4,
                 'status' => true,
-                'route' => 'admin.fee.index',
+                'route' => 'admin.section.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
                 'parent_id' => null,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
-            [
-                'name' => 'Fee Category',
-                'slug' => 'fee_category',
-                'order' => 1,
-                'status' => true,
-                'route' => 'admin.fee_category.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 10,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-            [
-                'name' => 'Fee',
-                'slug' => 'fee',
-                'order' => 2,
-                'status' => true,
-                'route' => 'admin.fee.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 10,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-            [
-                'name' => 'Installment',
-                'slug' => 'installment',
-                'order' => 8,
-                'status' => true,
-                'route' => 'admin.installment.index',
-                'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => null,
-                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
-                'related_route' => null
-            ],
-
             [
                 'name' => 'Library',
                 'slug' => 'library',
-                'order' => 9,
+                'order' => 5,
                 'status' => true,
                 'route' => 'admin.library.category.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
@@ -190,7 +157,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.category.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 14,
+                'parent_id' => 11,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -201,7 +168,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.book.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 14,
+                'parent_id' => 11,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -212,25 +179,102 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.library.issued.books.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 14,
+                'parent_id' => 11,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
-                'name' => 'Canteen',
-                'slug' => 'canteen',
-                'order' => 10,
+                'name' => 'Fees',
+                'slug' => 'fees',
+                'order' => 6,
                 'status' => true,
-                'route' => 'admin.canteen.index',
+                'route' => 'admin.fee.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
                 'parent_id' => null,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
             [
+                'name' => 'Fee Category',
+                'slug' => 'fee_category',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.fee_category.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Fee',
+                'slug' => 'fee',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.fee.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Installment',
+                'slug' => 'installment',
+                'order' => 3,
+                'status' => true,
+                'route' => 'admin.installment.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Discount Package',
+                'slug' => 'discount_package',
+                'order' => 4,
+                'status' => true,
+                'route' => 'admin.discount_package.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 15,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Template',
+                'slug' => 'template',
+                'order' => 7,
+                'status' => true,
+                'route' => 'admin.email_template.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Email Template',
+                'slug' => 'email_template',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.email_template.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 20,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Sms Template',
+                'slug' => 'sms_template',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.email_template.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 20,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
                 'name' => 'Calendar',
                 'slug' => 'calendar',
-                'order' => 9,
+                'order' => 8,
                 'status' => true,
                 'route' => 'admin.calendar.group.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
@@ -245,7 +289,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.calendar.group.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 15,
+                'parent_id' => 23,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -256,10 +300,32 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.calendar.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 15,
+                'parent_id' => 23,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
+            [
+                'name' => 'House',
+                'slug' => 'house',
+                'order' => 9,
+                'status' => true,
+                'route' => 'admin.house.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Canteen',
+                'slug' => 'canteen',
+                'order' => 10,
+                'status' => true,
+                'route' => 'admin.canteen.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],  
             [
                 'name' => 'Transportation',
                 'slug' => 'transportation',
@@ -278,7 +344,7 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.vehicle.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 19,
+                'parent_id' => 28,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
@@ -289,10 +355,11 @@ class MenuTableSeeder extends Seeder
                 'status' => true,
                 'route' => 'admin.route.index',
                 'icon' => 'm-menu__link-icon flaticon-line-graph',
-                'parent_id' => 19,
+                'parent_id' => 28,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
+            
 
 
 //            [

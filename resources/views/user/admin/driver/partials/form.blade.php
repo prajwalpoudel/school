@@ -13,6 +13,10 @@
 
         <div class="form-group m-form__group row">
             <x-inputs.text form-class="col-lg-6" label="Address" labelfor="address" name="address" type="text" placeHolder="Enter address" value="{{  $data['driver']->user->detail->address ?? null }}"></x-inputs.text>
+            <x-inputs.text form-class="col-lg-6" label="Salary" labelfor="salary" name="salary" type="number" placeHolder="Enter address" value="{{  $data['driver']->user->detail->address ?? null }}"></x-inputs.text>
+        </div>
+         <div class="form-group m-form__group row">
+            <x-inputs.text form-class="col-lg-6" label="Licence Number" labelfor="licence_number" name="licence_number" type="text" placeHolder="Enter Licence number" value="{{  $data['driver']->licence_number ?? null }}"></x-inputs.text>
         </div>
 
 

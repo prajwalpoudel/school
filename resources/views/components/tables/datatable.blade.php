@@ -53,11 +53,11 @@
 
 @push('script')
     <script>
-        var id =
-            {!! json_encode($tableId)  !!}
-        var columns =
-            {!! $columns  !!}
-        var url = {!! json_encode($url) !!}
+        $(document).ready(function() {
+            var id = {!! json_encode($tableId)  !!}
+            var columns =
+                {!! $columns  !!}
+            var url = {!! json_encode($url) !!}
 
             $('#' + id).DataTable({
                 processing: true,
@@ -65,5 +65,6 @@
                 ajax: url,
                 columns: columns,
             });
+        })
     </script>
 @endpush

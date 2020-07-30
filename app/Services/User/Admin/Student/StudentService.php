@@ -25,7 +25,7 @@ class StudentService extends BaseService
     public function store($storeData) {
         $userData = Arr::only($storeData, ['first_name', 'last_name', 'email', 'role_id', 'password']);
         $userDetailData = Arr::only($storeData, ['address']);
-        $studentData = Arr::only($storeData, ['section_id']);
+        $studentData = Arr::only($storeData, ['section_id', 'house_id']);
         $studentDetailData = null;
 
         DB::beginTransaction();

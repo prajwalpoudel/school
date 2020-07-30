@@ -84,6 +84,22 @@ Route::name('calendar.')->group(function () {
     Route::resource('teacher', 'Teacher\TeacherController');
 
     // Driver
-    Route::get('driver/list', 'Driver\DriverController@list')->name('teacher.list');
+    Route::get('driver/list', 'Driver\DriverController@list')->name('driver.list');
     Route::resource('driver', 'Driver\DriverController');
+
+    // Accountant
+    Route::get('accountant/list', 'Accountant\AccountantController@list')->name('driver.list');
+    Route::resource('accountant', 'Accountant\AccountantController');
+
+    //House
+    Route::get('house/list', 'House\HouseController@list')->name('teacher.list');
+    Route::resource('house', 'House\HouseController');
+
+    // Librarian 
+    Route::get('librarian/list', 'Librarian\LibrarianController@list')->name('driver.list');
+    Route::resource('librarian', 'Librarian\LibrarianController');
+
+    // Parents
+    Route::get('parent/list', 'Parent\ParentController@list')->name('driver.list');
+    Route::resource('parent', 'Parent\ParentController');
 

@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Guardian extends Model
 {
     public $table = 'parents';
-    protected $fillable = [];
+    protected $fillable = ['user_id'];
 
-    /**
-     * @return BelongsTo
-     */
+
+     public  function students() {
+        return $this->belongsToMany(Student::class,'parent_students','parent_id','student_id');
+    }
+
     public  function user() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id','id');
     }
 }

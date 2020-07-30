@@ -16,6 +16,8 @@ class CreateDriversTable extends Migration
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->float('salary');
+            $table->string('licence_number');
             $table->timestamps();
             $table->softDeletes();
 

@@ -13,7 +13,7 @@
 <!--begin::Page Scripts -->
 <script src="{{asset('admin/assets/app/js/dashboard.js')}}" type="text/javascript"></script>
 
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="{{asset('general/datatables/js/datatables.min.js')}}"></script>
 
 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 <script src="{{asset('admin/assets/demo/demo12/custom/crud/forms/widgets/select2.js')}}" type="text/javascript"></script>

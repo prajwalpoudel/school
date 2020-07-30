@@ -50,6 +50,10 @@ class RoleTableSeeder extends Seeder
             [
                 'name' => 'accountant',
                 'display_name' => 'Accountant',
+            ],
+            [
+                'name' => 'librarian',
+                'display_name' => 'Librarian',
             ]
         ];
 
