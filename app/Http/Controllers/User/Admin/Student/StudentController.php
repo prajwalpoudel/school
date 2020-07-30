@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\School\Constants\RoleConstant;
 use App\Services\General\DatatableService;
 use App\Services\General\GradeService;
+use App\Services\General\House\HouseService;
 use App\Services\General\SectionService;
 use App\Services\User\Admin\Student\StudentService;
 use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
@@ -35,6 +36,11 @@ class StudentController extends Controller
      * @var DatatableService
      */
     private $datatableService;
+     /**
+     * @var DatatableService
+     */
+    private $houseService;
+
 
     /**
      * StudentController constructor.
@@ -43,13 +49,15 @@ class StudentController extends Controller
      * @param DatatableService $datatableService
      * @param GradeService $gradeService
      * @param SectionService $sectionService
+     * @param HouseService $houseService
      */
     public function __construct(
         Breadcrumbs $breadcrumbs,
         StudentService $studentService,
         DatatableService $datatableService,
         GradeService $gradeService,
-        SectionService $sectionService
+        SectionService $sectionService,
+        HouseService $houseService
     )
     {
         $this->breadcrumbs = $breadcrumbs;
@@ -57,6 +65,7 @@ class StudentController extends Controller
         $this->sectionService = $sectionService;
         $this->studentService = $studentService;
         $this->datatableService = $datatableService;
+        $this->houseService = $houseService;
     }
 
 /**
@@ -121,7 +130,13 @@ public function list() {
                         'joins' => []
                     ]
                 ]
-            ]
+            ],
+            [
+                'name' => 'houses',
+                'first' => 'students.house_id',
+                'second' => 'houses.id',
+                'joins' => []
+            ],
         ],
         [
             'users.id as id',
@@ -132,14 +147,19 @@ public function list() {
             'roll',
             'sections.name as section',
             'grades.display_name as grade',
-            'user_details.address'
+            'user_details.address',
+            'houses.name as house'
         ]
     );
 
+    $query->editColumn('house', function ($data) {
+        return $data->house ?? 'Not assigned';
+    });
     $query->addColumn('action', function ($data) use($actionData) {
         $id = (int) $data->student_id;
         return view('general.datatable.action', compact('actionData', 'id'));
     });
+    $query->rawColumns(['house', 'action']);
     return $query->make();
 }
 
@@ -153,8 +173,9 @@ public function create()
     $breadcrumbs = $this->breadcrumbs::render('admin.student.create');
     $grades = $this->gradeService->select(['id', 'name']);
     $sections = $this->sectionService->select(['id', 'grade_id', 'name']);
+    $houses = $this->houseService->all();
 
-    return view('user.admin.student.create', compact('breadcrumbs', 'grades', 'sections'));
+    return view('user.admin.student.create', compact('breadcrumbs', 'grades', 'sections','houses'));
 }
 
 /**
@@ -165,17 +186,22 @@ public function create()
  */
 public function store(Request $request)
 {
+
     $storeData = array_merge(
         $request->all(),
         [
             'role_id' => RoleConstant::STUDENT_ROLE_ID,
             'password' => bcrypt('password'),
-            'section_id' => (int) $request->section_id
+            'section_id' => (int) $request->section_id,
+            'house_id' => (int) $request->house_id,
         ]
     );
+        // dd($storeData);
+    
+
     $this->studentService->store($storeData);
 
-    return redirect()->back();
+    return redirect()->route('admin.student.index');
 }
 
 /**
@@ -202,8 +228,9 @@ public function edit($id)
     $breadcrumbs = $this->breadcrumbs::render('admin.student.edit');
     $grades = $this->gradeService->select(['id', 'display_name']);
     $sections = $this->sectionService->select(['id', 'grade_id', 'display_name']);
+    $houses = $this->houseService->all();
 
-    return view('user.admin.student.edit', compact('breadcrumbs', 'student', 'grades', 'sections'));
+    return view('user.admin.student.edit', compact('breadcrumbs', 'student', 'grades', 'sections','houses'));
 }
 
 /**

@@ -15,7 +15,11 @@ class CreateLibrariansTable extends Migration
     {
         Schema::create('librarians', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->float('salary');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

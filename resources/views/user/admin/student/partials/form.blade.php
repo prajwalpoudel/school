@@ -35,6 +35,16 @@
                 check-field="grade_id"
             ></x-inputs.bootstrap-dependent-select>
         </div>
+         <div class="form-group m-form__group row">
+            
+            <x-inputs.bootstrap-select form-class="col-lg-6" label="house"
+                                           labelfor="house"
+                                           name="house_id" select-id="house_id"
+                                           placeHolder="Enter House"
+                                           :options="$houses" optionText="name"
+                                           optionValue="id">
+                </x-inputs.bootstrap-select>
+        </div>
 
 
     </x-slot>

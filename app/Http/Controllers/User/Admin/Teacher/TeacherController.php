@@ -98,7 +98,9 @@ class TeacherController extends Controller
                 'first_name',
                 'last_name',
                 'email',
-                'user_details.address'
+                'address',
+                'phone',
+                'salary'
             ]
         );
 

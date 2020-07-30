@@ -20,7 +20,7 @@ class Section extends Model
     ];
 
     /**
-     * @return BelongsTo
+     * @return belongsTo
      */
     public function grade() {
         return $this->belongsTo(Grade::class);

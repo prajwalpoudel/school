@@ -96,7 +96,9 @@ class DriverController extends Controller
                 'last_name',
                 'user_details.phone',
                 'email',
-                'user_details.address'
+                'user_details.address',
+                'salary',
+                'licence_number'
             ]
         );
 

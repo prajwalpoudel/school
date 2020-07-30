@@ -23,7 +23,7 @@ class DriverService extends BaseService
     public function store($storeData) {
         $userData = Arr::only($storeData, ['first_name', 'last_name', 'email', 'role_id', 'password']);
         $userDetailData = Arr::only($storeData, ['phone','address']);
-        $driverData = [];
+        $driverData = Arr::only($storeData, ['salary','licence_number']);
 
         DB::beginTransaction();
         $user = app(UserService::class)->store($userData, $userDetailData);
@@ -40,7 +40,7 @@ class DriverService extends BaseService
     {
        $userData = Arr::only($updateData, ['first_name', 'last_name', 'email']);
         $userDetailData = Arr::only($updateData, ['phone','address']);
-        $driverData = [];
+        $driverData = Arr::only($updateData, ['salary','licence_number']);
 
 
         DB::beginTransaction();

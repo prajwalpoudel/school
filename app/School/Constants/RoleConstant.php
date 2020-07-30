@@ -33,6 +33,11 @@ class RoleConstant
      * Accountant Role Constant
      */
     const ACCOUNTANT_ROLE_ID = 6;
+     /**
+     * Librarian Role Constant
+     */
+    const LIBRARIAN_ROLE_ID = 7;
+    
 
 
 }

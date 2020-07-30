@@ -10,7 +10,7 @@ class Teacher extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = [];
+    protected $fillable = ['user_id','salary'];
     public $appends = ['full_name'];
 
     /**

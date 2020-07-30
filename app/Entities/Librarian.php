@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Librarian extends Model
 {
-    protected $fillable = [];
+    protected $fillable = ['user_id','salary'];
 
     /**
      * @return BelongsTo

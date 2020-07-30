@@ -27,8 +27,9 @@ class TeacherService extends BaseService
      */
     public function store($storeData) {
         $userData = Arr::only($storeData, ['first_name', 'last_name', 'email', 'role_id', 'password']);
-        $userDetailData = Arr::only($storeData, ['address']);
-        $teacherData = [];
+        $userDetailData = Arr::only($storeData, ['phone','address']);
+        $teacherData = Arr::only($storeData, ['salary']);
+
         $teacherDetailData = null;
 
 
@@ -40,6 +41,8 @@ class TeacherService extends BaseService
             $teacher->detail()->create($teacherDetailData);
         }
         DB::commit();
+
+       
     }
 
     /**
@@ -50,8 +53,8 @@ class TeacherService extends BaseService
     public function update($updateData, $id)
     {
         $userData = Arr::only($updateData, ['first_name', 'last_name', 'email']);
-        $userDetailData = Arr::only($updateData, ['address']);
-        $teacherData = [];
+        $userDetailData = Arr::only($updateData, ['phone','address']);
+        $teacherData = Arr::only($updateData, ['salary']);
         $teacherDetailData = null;
 
         DB::beginTransaction();

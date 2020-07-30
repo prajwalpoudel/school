@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Accountant extends Model
 {
-    protected $fillable = ['user_id'];
+    protected $fillable = ['user_id','salary'];
 
     /**
      * @return BelongsTo
@@ -15,4 +15,5 @@ class Accountant extends Model
     public  function user() {
         return $this->belongsTo(User::class);
     }
+
 }

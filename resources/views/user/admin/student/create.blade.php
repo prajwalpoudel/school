@@ -10,7 +10,7 @@
                             'form-method' => 'post',
                             'form-title' => 'Create Student',
                             'button-text' => 'Save',
-                            'student' => null
+                            'student' => null,
                         ]
             )
     </div>

@@ -16,7 +16,6 @@ class SendSectionTeacherAssignedNotification implements ShouldQueue
      */
     public function __construct()
     {
-        //
     }
 
     /**

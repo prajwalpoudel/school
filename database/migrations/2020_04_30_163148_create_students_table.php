@@ -17,11 +17,14 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('section_id');
+            $table->unsignedBigInteger('house_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('section_id')->references('id')->on('sections');
+            $table->foreign('house_id')->references('id')->on('houses');
+
 
         });
     }
