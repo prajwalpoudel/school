@@ -46,6 +46,10 @@
                 </x-inputs.bootstrap-select>
         </div>
 
+        <div class="form-group m-form__group row">
+            <x-inputs.image form-class="col-lg-6" label="Image" labelfor="image" inputId="image" name="image"  value="{{  $data['student']->user->first_name ?? null }}"></x-inputs.image>
+        </div>
+
 
     </x-slot>
     <x-slot name="footer">

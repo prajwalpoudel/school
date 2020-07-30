@@ -82,6 +82,8 @@ public function index()
 
 public function list() {
     $actionData = [
+        'icon' => true,
+        'text' => false,
         'edit' => true,
         'editUrl' => 'admin.student.edit',
         'editIcon' => '',

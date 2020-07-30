@@ -44,6 +44,8 @@ class CanteenController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.canteen.edit',
             'editIcon' => '',

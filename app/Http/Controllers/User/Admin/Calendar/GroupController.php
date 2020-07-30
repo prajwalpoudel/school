@@ -45,6 +45,8 @@ class GroupController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.calendar.group.edit',
             'editIcon' => '',

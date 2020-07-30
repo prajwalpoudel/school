@@ -33,6 +33,7 @@ Route::resource('fee_category', 'Fees\FeeCategoryController');
 
 // Installment
 Route::get('installment/list', 'Fees\InstallmentController@list')->name('discount_package.list');
+Route::get('installment/status/change/{id}', 'Fees\InstallmentController@changeStatus')->name('installment.status.change');
 Route::resource('installment', 'Fees\InstallmentController');
 
 //  Library

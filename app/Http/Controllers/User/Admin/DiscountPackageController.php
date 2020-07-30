@@ -57,6 +57,10 @@ class DiscountPackageController extends Controller
     public function list()
     {
         $actionData = [
+            'icon' => true,
+            'text' => false,
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.discount_package.edit',
             'editIcon' => '',

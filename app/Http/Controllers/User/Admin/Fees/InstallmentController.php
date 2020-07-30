@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User\Admin\Fees;
 
+use App\Events\User\Admin\InstallmentPublished;
 use App\Http\Controllers\Controller;
 use App\Services\General\DatatableService;
 use App\Services\General\FeeCategoryService;
@@ -55,6 +56,8 @@ class InstallmentController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.installment.edit',
             'editIcon' => '',
@@ -107,15 +110,15 @@ class InstallmentController extends Controller
             return '';
         });
         $query->editColumn('status', function ($data) {
+            $id = $data->id;
             $name = 'published_status';
             $checked = false;
             $disabled = false;
             if($data->status == 1) {
                 $checked = true;
                 $disabled = true;
-                return view('general.datatable.switch', compact('name', 'disabled', 'checked'));
             }
-            return view('general.datatable.switch', compact('name', 'disabled', 'checked'));
+            return view('user.admin.installment.switch', compact('name', 'disabled', 'checked', 'id'));
         });
         $query->addColumn('action', function ($data) use($actionData) {
             $id = $data->id;
@@ -213,5 +216,16 @@ class InstallmentController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function changeStatus($id) {
+        $installment = $this->installmentService->findOrFail($id);
+        DB::beginTransaction();
+        event(new InstallmentPublished($installment));
+        $installment->status = !$installment->status;
+        $installment->save();
+        DB::commit();
+
+        return;
     }
 }
