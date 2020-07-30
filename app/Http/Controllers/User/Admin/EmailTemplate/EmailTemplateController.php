@@ -47,6 +47,8 @@ class EmailTemplateController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.email_template.edit',
             'editIcon' => '',

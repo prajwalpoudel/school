@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User\Admin\Grade;
 
+use App\Entities\Grade;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\General\GradeRequest;
 use App\Services\General\DatatableService;
@@ -47,26 +48,36 @@ class GradeController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.grade.edit',
-            'editIcon' => '',
+            'editIcon' => 'fa fa-edit',
             'editClass' => '',
-            'delete' => false,
+            'delete' => true,
+            'deleteUrl' => 'admin.grade.destroy',
+            'deleteIcon' => 'fa fa-trash',
             'view' => true,
             'viewUrl' => 'admin.grade.show',
-            'viewIcon' => '',
+            'viewIcon' => 'fa fa-eye',
             'viewClass' => '',
         ];
 
-        $query = $this->datatableService->getData(
-            'grades',
-            null,
+        $query = $this->datatableService->getDataByEloquent(
+            Grade::class,
+            ['sections', 'students'],
             [
                 'id',
-                'name',
-                'display_name',
+                'grades.name as name',
+                'display_name'
             ]
         );
+        $query->addColumn('no_of_sections', function ($data) {
+            return $data->sections->count();
+        });
+        $query->addColumn('no_of_students', function ($data) {
+            return $data->students->count();
+        });
         $query->addColumn('action', function ($data) use($actionData) {
             $id = $data->id;
             return view('general.datatable.action', compact('actionData', 'id'));

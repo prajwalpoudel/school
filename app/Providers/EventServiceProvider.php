@@ -27,6 +27,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\User\Admin\SendSectionViceRepresentativeAssignedNotification',
             'App\Listeners\User\Admin\SendSectionTeacherAssignedNotification'
         ],
+        'App\Events\User\Admin\InstallmentPublished' => [
+            'App\Listeners\User\Admin\InstallmentPublishedNotification',
+        ]
     ];
 
     /**

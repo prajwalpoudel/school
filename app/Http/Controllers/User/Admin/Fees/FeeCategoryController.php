@@ -47,6 +47,8 @@ class FeeCategoryController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.fee_category.edit',
             'editIcon' => '',

@@ -57,6 +57,8 @@ class BookController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.library.book.edit',
             'editIcon' => '',
