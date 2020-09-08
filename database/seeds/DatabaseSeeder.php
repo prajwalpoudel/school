@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GradeSeeder::class);
         $this->call(SectionSeeder::class);
         $this->call(EmailTemplateTableSeeder::class);
+        $this->call(DayTableSeeder::class);
     }
 }

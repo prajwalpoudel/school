@@ -24,7 +24,7 @@
             @include('user.admin.includes.sidebar')
 
         <!-- END: Left Aside -->
-        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+        <div class="m-grid__item m-grid__item--fluid m-wrapper" id="app">
 
             <!-- BEGIN: Subheader -->
                     @yield('breadcrumbs');

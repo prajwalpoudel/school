@@ -20,21 +20,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c6a357-83bd-422b-b326-e9e480a4e912" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Services/General/DayService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/User/Admin/CmsPages/CmsPageService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/User/Admin/Routine/ClassRoutineService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/cms_pages/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/cms_pages/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/cms_pages/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/cms_pages/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/cms_pages/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/routine/class/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/admin/routine/exam/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/buttons/button.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/buttons/modalButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/inputs/bootstrapSelect.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/inputs/select.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/inputs/text.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/general/portlets/basic.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/adminComponents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/api/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/components/routines/class/class.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/components/routines/class/createModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/components/routines/class/editModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/components/routines/class/weekDayModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/user/admin/components/routines/exam/exam.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Section.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Section/SectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Section/SectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Student/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/User/Admin/SendSectionTeacherAssignedNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/User/Admin/SendSectionTeacherAssignedNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/User/Admin/Student/StudentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/User/Admin/Student/StudentService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_30_163148_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_30_163148_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Accountant/AccountantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Accountant/AccountantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/House/HouseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/House/HouseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Subject/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Admin/Subject/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/tables/datatable.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/tables/datatable.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/student/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/student/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/student/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/student/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/student/partials/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/general/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/general/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/inputs/ckeditor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/inputs/ckeditor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/inputs/image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/inputs/image.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/includes/header-link.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/includes/header-link.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/includes/script-footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/includes/script-footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/admin/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user/admin/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +77,39 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="school@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="school@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="school@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="school: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -274,42 +340,60 @@
       <workItem from="1595403710788" duration="2579000" />
       <workItem from="1595502461668" duration="94000" />
       <workItem from="1595506858892" duration="1030000" />
+      <workItem from="1596191863646" duration="597000" />
+      <workItem from="1596214977748" duration="1449000" />
+      <workItem from="1596256986630" duration="20968000" />
+      <workItem from="1596285831833" duration="5784000" />
+      <workItem from="1596302472449" duration="6361000" />
+      <workItem from="1596328137712" duration="16281000" />
+      <workItem from="1596502646081" duration="65000" />
+      <workItem from="1596531418162" duration="723000" />
+      <workItem from="1596556974062" duration="679000" />
+      <workItem from="1596559483976" duration="2052000" />
+      <workItem from="1596589043320" duration="444000" />
+      <workItem from="1596689199061" duration="68000" />
+      <workItem from="1596695912183" duration="613000" />
+      <workItem from="1596783211205" duration="25000" />
+      <workItem from="1596814866445" duration="4798000" />
+      <workItem from="1596852401394" duration="9858000" />
+      <workItem from="1596971006377" duration="21000" />
+      <workItem from="1597485288389" duration="1924000" />
+      <workItem from="1597560742680" duration="937000" />
+      <workItem from="1599106963214" duration="2016000" />
+      <workItem from="1599180347230" duration="662000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Inspections" timestamp="1591975964765">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1591975964765" />
-    <state x="361" y="71" width="814" height="728" key="#Intentions" timestamp="1589013655030">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="71" width="814" height="728" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1589013655030" />
     <state x="570" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595088411859">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="321" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1593883462755" />
     <state x="570" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595088411859" />
-    <state x="537" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592325542031">
+    <state x="537" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596817629652">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="537" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1592325542031" />
+    <state x="537" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1596817629652" />
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1595067784526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -318,11 +402,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1592042993636" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595150512625">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596816280139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="444" y="148" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593917063382" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595150512625" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596816280139" />
     <state x="549" y="338" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1591802733175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -335,23 +419,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593922476245" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589513190950" />
-    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1595088442666">
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1596290912081">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1595088442666" />
-    <state x="576" y="227" key="NewPhpClassDialog" timestamp="1592416318887">
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1596290912081" />
+    <state x="576" y="227" key="NewPhpClassDialog" timestamp="1596858294239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="576" y="227" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592416318887" />
+    <state x="576" y="227" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1596858294239" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1596817472919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1596817472919" />
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup" timestamp="1592581602663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup/0.0.1536.824@0.0.1536.824" timestamp="1592581602663" />
-    <state x="668" y="302" width="322" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1592615488037">
+    <state x="668" y="302" width="322" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596815597438">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="668" y="302" width="322" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1592615488037" />
+    <state x="668" y="302" width="322" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1596815597438" />
     <state x="656" y="302" width="297" height="219" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1592497697056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -369,23 +456,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1590902770740" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595214421898">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1599180997063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595214421898" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599180997063" />
     <state x="293" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593882407553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="293" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1593882407553" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1595123926016">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1596336104054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1595123926016" />
-    <state x="383" y="128" width="672" height="600" key="search.everywhere.popup" timestamp="1595404775264">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596336104054" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597562444265">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="383" y="128" width="672" height="600" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595404775264" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595395577358" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1597562444265" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -403,6 +490,10 @@
           <url>file://$PROJECT_DIR$/resources/views/general/datatable/switch.blade.php</url>
           <line>26</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/vue/general/inputs/text.vue</url>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

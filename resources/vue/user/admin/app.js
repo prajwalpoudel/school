@@ -8,6 +8,26 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
+import { required, email, alpha } from 'vee-validate/dist/rules';
+
+import adminComponents from './adminComponents'
+
+
+let baseUrl = document.head.querySelector('meta[name="base-url"]');
+
+window.baseUrl = baseUrl.content;
+
+Vue.component('ValidationProvider', ValidationProvider);
+Vue.component('ValidationObserver', ValidationObserver);
+extend('email', email);
+extend('required', {
+    ...required,
+    message: 'This field is required'
+});
+extend('alpha', alpha);
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16,10 +36,6 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +45,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components: adminComponents
 });

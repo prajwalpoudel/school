@@ -1,6 +1,19 @@
 .pt-10 {
     padding-top: 10px;
 }
+.mt-rem-1 {
+    margin-top: 1rem !important;
+}
+.mt-rem-2 {
+    margin-top: 2rem !important;
+}
+
+.primary {
+    color: blue;
+}
+.success {
+    color: lightseagreen;
+}
 
 .error {
     color: red;
