@@ -3,6 +3,7 @@
     <title>Metronic | Dashboard</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="base-url" content="{{ url('') }}"/>
 
     <!--begin::Web font -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
@@ -14,6 +15,8 @@
             }
         });
     </script>
+    <script  src="{{asset('vue/user/admin/app.js') }}" async></script>
+
 
     <!--end::Web font -->
 

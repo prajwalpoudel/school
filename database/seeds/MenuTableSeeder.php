@@ -105,7 +105,7 @@ class MenuTableSeeder extends Seeder
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
-            
+
             [
                 'name' => 'Driver',
                 'slug' => 'driver',
@@ -325,7 +325,7 @@ class MenuTableSeeder extends Seeder
                 'parent_id' => null,
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
-            ],  
+            ],
             [
                 'name' => 'Transportation',
                 'slug' => 'transportation',
@@ -359,7 +359,40 @@ class MenuTableSeeder extends Seeder
                 'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
                 'related_route' => null
             ],
-            
+            [
+                'name' => 'Routines',
+                'slug' => 'routines',
+                'order' => 12,
+                'status' => true,
+                'route' => 'admin.routine.class.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => null,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Class Routine',
+                'slug' => 'class_routine',
+                'order' => 1,
+                'status' => true,
+                'route' => 'admin.routine.class.index',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 31,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+            [
+                'name' => 'Exam Routine',
+                'slug' => 'exam_routine',
+                'order' => 2,
+                'status' => true,
+                'route' => 'admin.routine.exam',
+                'icon' => 'm-menu__link-icon flaticon-line-graph',
+                'parent_id' => 31,
+                'menu_group_id' => MenuGroupConstant::ADMIN_SIDEBAR_ID,
+                'related_route' => null
+            ],
+
 
 
 //            [

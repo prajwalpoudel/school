@@ -17,7 +17,7 @@
             var value = {!! json_encode($value) !!}
                 CKEDITOR.replace(inputId);
             if (value) {
-                CKEDITOR.instances[inputId].setData(value);
+                CKEmDITOR.instances[inputId].setData(value);
             }
         });
     </script>

@@ -46,14 +46,17 @@ class HouseController extends Controller
      */
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.house.edit',
-            'editIcon' => '',
+            'editIcon' => 'fa fa-edit',
             'editClass' => '',
             'delete' => false,
+            'deleteIcon' => 'fa fa-trash',
             'view' => true,
             'viewUrl' => 'admin.house.edit',
-            'viewIcon' => '',
+            'viewIcon' => 'fa fa-eye',
             'viewClass' => '',
         ];
 

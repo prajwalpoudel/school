@@ -51,14 +51,16 @@ class SubjectController extends Controller
 
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.subject.edit',
-            'editIcon' => '',
+            'editIcon' => 'fa fa-edit',
             'editClass' => '',
             'delete' => false,
             'view' => true,
             'viewUrl' => 'admin.subject.edit',
-            'viewIcon' => '',
+            'viewIcon' => 'fa fa-eye',
             'viewClass' => '',
         ];
 

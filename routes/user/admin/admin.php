@@ -68,39 +68,53 @@ Route::name('calendar.')->group(function () {
     Route::get('calendar', 'Calendar\CalendarController@index')->name('index');
 });
 
-    // Canteen
-    Route::get('canteen/list', 'Canteen\CanteenController@list')->name('canteen.list');
-    Route::resource('canteen', 'Canteen\CanteenController');
+// Canteen
+Route::get('canteen/list', 'Canteen\CanteenController@list')->name('canteen.list');
+Route::resource('canteen', 'Canteen\CanteenController');
 
-    // vehicle
-    Route::get('vehicle/list', 'Vehicle\VehicleController@list')->name('vehicle.list');
-    Route::resource('vehicle', 'Vehicle\VehicleController');
+// vehicle
+Route::get('vehicle/list', 'Vehicle\VehicleController@list')->name('vehicle.list');
+Route::resource('vehicle', 'Vehicle\VehicleController');
 
-    // route
-    Route::get('route/list', 'Route\RouteController@list')->name('route.list');
-    Route::resource('route', 'Route\RouteController');
+// route
+Route::get('route/list', 'Route\RouteController@list')->name('route.list');
+Route::resource('route', 'Route\RouteController');
 
-    // Teachers
-    Route::get('teacher/list', 'Teacher\TeacherController@list')->name('teacher.list');
-    Route::resource('teacher', 'Teacher\TeacherController');
+// Teachers
+Route::get('teacher/list', 'Teacher\TeacherController@list')->name('teacher.list');
+Route::resource('teacher', 'Teacher\TeacherController');
 
-    // Driver
-    Route::get('driver/list', 'Driver\DriverController@list')->name('driver.list');
-    Route::resource('driver', 'Driver\DriverController');
+// Driver
+Route::get('driver/list', 'Driver\DriverController@list')->name('driver.list');
+Route::resource('driver', 'Driver\DriverController');
 
-    // Accountant
-    Route::get('accountant/list', 'Accountant\AccountantController@list')->name('driver.list');
-    Route::resource('accountant', 'Accountant\AccountantController');
+// Accountant
+Route::get('accountant/list', 'Accountant\AccountantController@list')->name('driver.list');
+Route::resource('accountant', 'Accountant\AccountantController');
 
-    //House
-    Route::get('house/list', 'House\HouseController@list')->name('teacher.list');
-    Route::resource('house', 'House\HouseController');
+//House
+Route::get('house/list', 'House\HouseController@list')->name('teacher.list');
+Route::resource('house', 'House\HouseController');
 
-    // Librarian 
-    Route::get('librarian/list', 'Librarian\LibrarianController@list')->name('driver.list');
-    Route::resource('librarian', 'Librarian\LibrarianController');
+// Librarian
+Route::get('librarian/list', 'Librarian\LibrarianController@list')->name('driver.list');
+Route::resource('librarian', 'Librarian\LibrarianController');
 
-    // Parents
-    Route::get('parent/list', 'Parent\ParentController@list')->name('driver.list');
-    Route::resource('parent', 'Parent\ParentController');
+// Parents
+Route::get('parent/list', 'Parent\ParentController@list')->name('driver.list');
+Route::resource('parent', 'Parent\ParentController');
+
+// Routine
+
+// Class Routine
+Route::name('routine.')->group(function () {
+    Route::resource('routine/class', 'Routine\GradeController');
+});
+
+// Exam Routine
+Route::get('routine/exam', 'Routine\ExamController@index')->name('routine.exam');
+
+// Exam Routine
+Route::get('cms-page/list', 'CmsPages\CmsPageController@list')->name('cms-page.list');
+Route::resource('cms-page', 'CmsPages\CmsPageController');
 

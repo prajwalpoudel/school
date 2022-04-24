@@ -45,22 +45,24 @@ class AccountantController extends Controller
         $this->datatableService = $datatableService;
         $this->breadcrumbs = $breadcrumbs;
         $this->accountantService = $accountantService;
-       
+
     }
 
     public function list() {
         $actionData = [
+            'icon' => true,
+            'text' => false,
             'edit' => true,
             'editUrl' => 'admin.accountant.edit',
-            'editIcon' => '',
+            'editIcon' => 'fa fa-edit',
             'editClass' => '',
             'delete' => true,
             'deleteUrl' => 'menu',
-            'deleteIcon' => '',
+            'deleteIcon' => 'fa fa-trash',
             'deleteClass' => '',
             'view' => true,
             'viewUrl' => 'admin.accountant.edit',
-            'viewIcon' => '',
+            'viewIcon' => 'fa fa-eye',
             'viewClass' => '',
         ];
 

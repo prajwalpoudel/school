@@ -1,5 +1,3 @@
 {
-    "/assets/app.js": "/assets/app.js",
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/vue/user/admin/app.js": "/vue/user/admin/app.js"
 }

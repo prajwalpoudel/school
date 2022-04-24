@@ -3,7 +3,7 @@
         <label for="{{$labelFor}}">{{ $label }}</label>
     @endif
     <input type="file" class="form-control m-input m-input--air {{ $inputClass ?? '' }}" id="{{ $inputId ?? ''}}" name="{{$name}}" value="{{ $value }}">
-        <img src="https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg" id="preview-image" alt="">
+{{--        <img src="https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg" id="preview-image" alt="">--}}
     @if($helpText)
         <span class="m-form__help {{ $helpClass }}">{{ $helpText }}</span>
     @endif
